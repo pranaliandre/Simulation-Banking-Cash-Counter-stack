@@ -20,7 +20,7 @@ namespace Simulation_Banking_Stack
         static void Main(string[] args)
         {
             Console.WriteLine("!!Welcome to Banking Simulator Cash Counter!!");
-            Stack myStack = new Stack(); // object creation of linkedlist
+            Stack myStack = new Stack(); // object creation of Stack
             Banking bank = new Banking(); // object creation of Banking
 
             int count = 0;
@@ -42,12 +42,12 @@ namespace Simulation_Banking_Stack
                     {
                         case 1:
                             Console.WriteLine("Enter the accountant name");
-                            name = bank.setname();
+                            name = bank.SetName();
                             Console.WriteLine("Enter the account number");
-                            accountNo = bank.setAccountNo();
+                            accountNo = bank.SetAccountNo();
                             Console.WriteLine("Enter Deposite amount: ");
                             int depositeCash = Convert.ToInt32(Console.ReadLine());
-                            totalAccountantBalance = bank.cashDeposite(depositeCash, accountantBalance);
+                            totalAccountantBalance = bank.CashDeposite(depositeCash, accountantBalance);
                             myStack.Push(totalAccountantBalance);
                             myStack.PrintStack();
                             myStack.Pop();
@@ -56,9 +56,9 @@ namespace Simulation_Banking_Stack
 
                         case 2:
                             Console.WriteLine("Enter the accountant name");
-                            name = bank.setname();
+                            name = bank.SetName();
                             Console.WriteLine("Enter the account number");
-                            accountNo = bank.setAccountNo();
+                            accountNo = bank.SetAccountNo();
                             Console.WriteLine("Enter withdraw amount: ");
                             int withdrawCash = Convert.ToInt32(Console.ReadLine());
                             if (accountantBalance < withdrawCash)
@@ -67,7 +67,7 @@ namespace Simulation_Banking_Stack
                             }
                             else
                             {
-                                totalAccountantBalance = bank.cashWithdraw(withdrawCash, accountantBalance);
+                                totalAccountantBalance = bank.CashWithdraw(withdrawCash, accountantBalance);
                                 myStack.Push(totalAccountantBalance);
                                 myStack.PrintStack();
                                 myStack.Pop();

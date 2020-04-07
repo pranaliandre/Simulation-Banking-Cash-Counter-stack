@@ -10,7 +10,7 @@ namespace Simulation_Banking_Stack
         /// Method to check stack empty or not
         /// </summary>
         /// <returns></returns>
-        bool isEmpty()
+        bool IsEmpty()
         {
             return (top < 0);
         }

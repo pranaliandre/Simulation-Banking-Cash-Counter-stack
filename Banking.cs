@@ -9,7 +9,7 @@ namespace Simulation_Banking_Stack
         /// <param name="cashToWithdraw">cash withdraw</param>
         /// <param name="currentBalance">current balance in account</param>
         /// <returns></returns>
-        public int cashWithdraw(int cashToWithdraw, int currentBalance)
+        public int CashWithdraw(int cashToWithdraw, int currentBalance)
         {
             currentBalance = currentBalance - cashToWithdraw;
             return currentBalance;
@@ -21,7 +21,7 @@ namespace Simulation_Banking_Stack
         /// <param name="cashToDeposite">deposit cash</param>
         /// <param name="currentBalance">current balance in account</param>
         /// <returns></returns>
-        public int cashDeposite(int cashToDeposite, int currentBalance)
+        public int CashDeposite(int cashToDeposite, int currentBalance)
         {
             currentBalance = currentBalance + cashToDeposite;
             return currentBalance;
@@ -30,7 +30,7 @@ namespace Simulation_Banking_Stack
         /// Method to take user input account holder name
         /// </summary>
         /// <returns></returns>
-        public string setname()
+        public string SetName()
         {
             string name = Console.ReadLine();
             return name;
@@ -39,7 +39,7 @@ namespace Simulation_Banking_Stack
         /// Method to take user input account holder account no 
         /// </summary>
         /// <returns></returns>
-        public int setAccountNo()
+        public int SetAccountNo()
         {
             int accountNo = Convert.ToInt32(Console.ReadLine());
             return accountNo;
